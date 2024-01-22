@@ -3,7 +3,7 @@ const router = express.Router()
 var userModel = require('../src/model/users')
 const users = require("../src/model/users")
 
-router.post('/users/create', async(req,res) =>{
+router.post('/users/create', async(req,res) =>{ //inserting data
 
     const user = new userModel(req.body)
     try{
@@ -18,7 +18,7 @@ router.post('/users/create', async(req,res) =>{
     }
 })
 
-router.get('/users', async(req,res) =>{
+router.get('/users', async(req,res) =>{ // retrieving data
 
     try{
         const user = await userModel.find({})
@@ -29,7 +29,7 @@ router.get('/users', async(req,res) =>{
     }
 })
 
-router.patch('/users/:id', async(req,res) =>{
+router.patch('/users/:id', async(req,res) =>{ //updating data
 
     try{
         const id = req.params.id
@@ -45,7 +45,7 @@ router.patch('/users/:id', async(req,res) =>{
     }
 })
 
-router.delete('/users/:id', async(req,res) =>{
+router.delete('/users/:id', async(req,res) =>{ //deleting data
 
     try{
         const id = req.params.id
