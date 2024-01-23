@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Insert User</title>
+    </head>
+
+    <body>
+        <div class="box">
+            <div class="header">
+                <h1>Insert User Data</h1>
+            </div>
+            
+            <form action="/users/create" method="post" class="form" id="insert" novalidate>
+                <div class="txt_field" >
+                    <label for="name">User Name</label>
+                    <input type="text" id="name" name="name" required>                   
+                </div>
+                <div class="txt_field" >
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>                    
+                </div>
+                <div class="txt_field" >
+                    <label for="telephone">Telephone</label>
+                    <input type="tel" id="telephone" name="telephone" required>                   
+                </div>
+                <input type="submit" value="Save User" id="submit" name="submit">
+            </form>
+        </div>
+
+    </body>
+
+    </html>
