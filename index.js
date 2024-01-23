@@ -1,12 +1,15 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const bodyParser = require("body-parser")
+const dotenv = require("dotenv")
+
+dotenv.config()
 
 var routes = require('./routes/routes')
 const app = express()
 
-const port = 3000;
-const connectionURL = "mongodb+srv://acwellage:4MMej3lxli8YRxmF@cluster0.bkmyggo.mongodb.net/testDB?retryWrites=true&w=majority"
+const port = process.env.PORT || 3000;
+const connectionURL = process.env.DB_CONNECTION_STRING
 
 mongoose.connect(connectionURL,{
     useNewUrlParser: true,
