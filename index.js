@@ -3,10 +3,13 @@ const mongoose = require("mongoose")
 const bodyParser = require("body-parser")
 const dotenv = require("dotenv")
 
+
 dotenv.config()
 
 var routes = require('./routes/routes')
 const app = express()
+
+app.use(express.static('public'))
 
 const port = process.env.PORT || 3000;
 const connectionURL = process.env.DB_CONNECTION_STRING

@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 var userModel = require('../src/model/users')
-const users = require("../src/model/users")
+//const users = require("../src/model/users")
 
 router.post('/users/create', async(req,res) =>{ //inserting data
 
