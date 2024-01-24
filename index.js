@@ -29,5 +29,6 @@ connection.once("open", ()=>{
     console.log("Connected to database!!....")
 })
 
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 app.use(routes)
